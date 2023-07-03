@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <title>Факультеты</title>
+
+
+    <script>
+        // Функция для расчета стоимости
+        function calculateCost() {
+            // Получаем значение количества уроков из элемента с id "my-browser"
+            const numLessons = document.getElementById("my-browser").value;
+            
+            // Устанавливаем стоимость одного урока - 500
+            const costPerLesson = 500;
+            
+            // Вычисляем общую стоимость, умножая количество уроков на стоимость одного урока
+            const totalCost = numLessons * costPerLesson;
+            
+            // Задаем переменной value значение общей стоимости
+            value = totalCost;
+            
+            // Получаем элемент с id "stoimm"
+            stoim = document.getElementById("stoimm");
+            
+            // Устанавливаем значение поля "stoimm" равным общей стоимости
+            stoim.value = totalCost;
+        }
+    
+        // Функция для проверки валидности email
+        function validate(form_id, mail) {
+            // Регулярное выражение для проверки email
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            
+            // Получаем значение email адреса из элемента формы
+            var address = document.forms[form_id].elements[mail].value;
+            
+            // Получаем поле ввода email адреса
+            var inputField = document.forms[form_id].elements[mail];
+            
+            // Проверяем соответствие email регулярному выражению
+            if (reg.test(address) == false) {
+                // Если email не соответствует формату, устанавливаем сообщение об ошибке
+                inputField.setCustomValidity("Введите корректный e-mail");
+                return false;
+            } else {
+                // Если email соответствует формату, сбрасываем сообщение об ошибке
+                inputField.setCustomValidity("");
+                return true;
+            }
+        }
+
+
+        // Функция для открытия модального окна
+        function openModal(modalId) {
+                var modal = document.getElementById(modalId);
+                modal.style.display = "block";
+            }
+
+            // Функция для закрытия модального окна
+            function closeModal(modalId) {
+                var modal = document.getElementById(modalId);
+                modal.style.display = "none";
+            }
+
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__blocks">
+            <div class="left__block">
+                <header>
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="logo">
+                    </div>
+                    <nav>
+                        <ul>
+                            <a href="../index.html"><li>Главная</li></a>
+                            <a href="./news.html"><li>Новости</li></a>
+                            <a href="#!"><li>Факультеты</li></a>
+                            <a href="./teacher.html"><li>Преподаватели</li></a>
+                            <a href="./docs.html"><li>Документы</li></a>
+                            <a href="#input"><li>Войти</li></a>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="right__block">
+                <section class="faculties">
+                    <h2>ФАКУЛЬТЕТЫ</h2>
+                    <div class="faculties__card">
+                        <div class="faculties__card__content">
+                            <div class="faculties__card__title">
+                                <p>Художественный</p>
+                            </div>
+                            <div class="faculties__card__text">
+                                <p>
+                                    На данном факультете мы помогаем видеть и понимать красоту окружающего мира, стараемся способствовать воспитанию культуры чувств, развитию художественно-эстетического вкуса, трудовой и творческой активности, воспитываем целеустремленность, усидчивость, чувство взаимопомощи, даём возможность творческой самореализации личности.  Знания, умения, навыки воспитанники демонстрируют своим сверстникам, выставляя свои работы.
+                                </p>
+                                <br>
+                                <p><span>График:</span> вторник/четверг с 17:00 до 20:00</p>
+                                <p><span>Полный курс обучения:</span> 416 занятий</p>
+                            </div>
+                            <div class="faculties__card__button">
+                                <a href="#zapis"><button>ЗАПИСЬ</button></a>
+                            </div>
+                        </div>
+                        <div class="faculties__card__img">
+                            <img src="../img/facultets/1.png" alt="1">
+                        </div>
+                    </div>
+                    <div class="faculties__card">
+                        <div class="faculties__card__content">
+                            <div class="faculties__card__title">
+                                <p>Театральный</p>
+                            </div>
+                            <div class="faculties__card__text">
+                                <p>
+                                    Театр как искусство научит видеть прекрасное в жизни и в людях, зародит стремление самому нести в жизнь благое и доброе. Реализация программы с помощью выразительных средств театрального искусства таких как, интонация, мимика, жест, пластика, походка  учит детей глубоко чувствовать события, взаимоотношения между героями произведения. Театральная игра способствует развитию фантазии, воображения, памяти, всех видов творчества. 
+                                </p>
+                                <br>
+                                <p><span>График:</span> вторник/четверг с 17:00 до 20:00</p>
+                                <p><span>Полный курс обучения:</span> 416 занятий</p>
+                            </div>
+                            <div class="faculties__card__button">
+                                <a href="#zapis"><button>ЗАПИСЬ</button></a>
+                            </div>
+                        </div>
+                        <div class="faculties__card__img">
+                            <img src="../img/facultets/2.png" alt="2">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="footer__content">
+                <div class="footer__content__adr">
+                    Адрес: &nbsp Россия, г. Москва, ул. Маршала Новикова, 115
+                </div>
+                <div class="footer__content__phone">
+                    Телефон: &nbsp +7 (957) 557-41-99
+                </div>
+                <div class="footer__content__mail">
+                    E-mail: &nbsp 1dshiinworld@gmail.ru
+                </div>
+                <div class="footer__content__social">
+                    <div class="vk__icon">
+                        <a href="#!"><img src="../img/icons/vk.png" alt="vk"></a>
+                    </div>
+                    <div class="viber__icon">
+                        <a href="#!"><img src="../img/icons/viber.png" alt="viber"></a>
+                    </div>
+                    <div class="telegram__icon">
+                        <a href="#!"><img src="../img/icons/telegram.png" alt="telegram"></a>
+                    </div>
+                    <div class="inst__icon">
+                        <a href="#!"><img src="../img/icons/inst.png" alt="inst"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+        <div id="zapis" class="modalbackgroundzapis">
+            <form action="../zapis_edit.php" id="form_id" method="post" onsubmit="javascript:return validate('form_id','mail');">
+              <div class="modalwindowzapis">
+                <h1>ЗАПИСЬ</h1>
+                <input required type="text" placeholder="ФИО ребёнка" class="form-control" name="FIO"> 
+                <div>
+                  <div class="modalwindowzapis1">
+                    <input required maxlength="13" type="text" name="phone" placeholder="+7 (___) ___ - __ - __*">
+                  </div>
+                  <div class="modalwindowzapis2">
+                    <input required type="text" name="mail" placeholder="E-mail*">
+                  </div>
+                </div>
+                <div class="form_radio_btn">
+                  <h3 id="fak">Факультет:</h3>
+                  <input id="radio-1" type="radio" name="radio" value="1" checked>
+                  <label for="radio-1">Художественный</label>
+                </div>
+                <div class="form_radio_btn1">
+                  <input id="radio-2" type="radio" name="radio" value="2">
+                  <label for="radio-2">Театральный</label>
+                </div>
+                <div>
+                  <div class="modalwindowzapis3">
+                    <label for="my-browser"><h3>Кол-во занятий:</h3></label>
+                    <input required type="text" list="browsers" id="my-browser" onchange="calculateCost()" name="mybrowser">
+                    <datalist id="browsers">
+                      <option value="104" label="104">
+                      <option value="208" label="208">
+                      <option value="312" label="312">
+                      <option value="416" label="416">
+                    </datalist>
+                  </div>
+                  <div class="modalwindowzapis4">
+                    <h3>Расчётная стоимость:</h3>
+                    <input type="text" class="form-control" id="stoimm" name="stoim" readonly>
+                  </div>
+                </div>
+                <button name="formSubmit">Записаться</button>
+              </div>
+            </form>
+            <a href="#" class="close" onclick="calculateCost()"></a>
+          </div>
+          
+          <div id="input" class="modalbackground">
+            <form action="../login_edit.php" method="POST">
+              <div class="modalwindow">
+                <input required type="text" placeholder="Логин*" class="form-control" name="number"> 
+                <input required type="password" class="form-control" placeholder="Пароль*" name="pass" id="floatingPassword" placeholder="Password">
+                <button>Войти</button>
+              </div>
+            </form>
+            <a href="#" class="close" onclick="calculateCost()"></a>
+          </div>
+          
+          
+<style>
+                            @font-face {
+                            font-family: Ubuntu;
+                            font-weight: 400;
+                            src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+                            }
+
+                            @font-face {
+                            font-family: Ubuntu;
+                            font-weight: 700;
+                            src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf);
+                            }
+                .close {
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                opacity: 1;
+                }
+
+                .close:hover {
+                    opacity: 0.7;
+                }
+                .close:before, .close:after {
+                    position: absolute;
+                    left: 15px;
+                    content: ' ';
+                    height: 25px;
+                    width: 4px;
+                    background-color: rgb(0, 0, 0);
+                }
+                .close:before {
+                    transform: rotate(45deg);
+                }
+                .close:after {
+                    transform: rotate(-45deg);
+                }
+</style>
+
+
+
+
+          <script>
+            // Функция для расчета стоимости
+        function calculateCost() {
+            // Получаем значение количества уроков из элемента с id "my-browser"
+            const numLessons = document.getElementById("my-browser").value;
+            
+            // Устанавливаем стоимость одного урока - 500
+            const costPerLesson = 500;
+            
+            // Вычисляем общую стоимость, умножая количество уроков на стоимость одного урока
+            const totalCost = numLessons * costPerLesson;
+            
+            // Задаем переменной value значение общей стоимости
+            value = totalCost;
+            
+            // Получаем элемент с id "stoimm"
+            stoim = document.getElementById("stoimm");
+            
+            // Устанавливаем значение поля "stoimm" равным общей стоимости
+            stoim.value = totalCost;
+        }
+    
+        // Функция для проверки валидности email
+        function validate(form_id, mail) {
+            // Регулярное выражение для проверки email
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            
+            // Получаем значение email адреса из элемента формы
+            var address = document.forms[form_id].elements[mail].value;
+            
+            // Получаем поле ввода email адреса
+            var inputField = document.forms[form_id].elements[mail];
+            
+            // Проверяем соответствие email регулярному выражению
+            if (reg.test(address) == false) {
+                // Если email не соответствует формату, устанавливаем сообщение об ошибке
+                inputField.setCustomValidity("Введите корректный e-mail");
+                return false;
+            } else {
+                // Если email соответствует формату, сбрасываем сообщение об ошибке
+                inputField.setCustomValidity("");
+                return true;
+            }
+        }
+          </script>
+          
+           <!-- Подключение библиотеки jQuery -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+           <!-- Подключение плагина jquery.maskedinput для маскирования ввода -->
+           <script src="https://cdn.jsdelivr.net/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+           <!-- Начало блока скрипта на JavaScript -->
+           <script language="javascript">
+               $(function($) {
+                   // Использование функции-обертки для выполнения кода после загрузки страницы
+
+                   // Находим элемент input с атрибутом name="phone" и применяем к нему маску
+                   $('input[name="phone"]').mask("+7 (999) 999-99-99");
+               });
+           </script>
+    </div>
+    </div>
+</body>
+</html>

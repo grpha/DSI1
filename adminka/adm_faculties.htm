@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <title>Факультеты</title>
+    <script>
+    // получаем значение стоимости из поля ввода
+        let stoimost = document.querySelector('[name="stoim"]').value;
+        
+        // выполняем математическое вычисление, деля значение стоимости на стоимость одного занятия (500)
+        let kolvo_zan = Math.floor(parseFloat(stoimost) / 500);
+        
+        // записываем результат расчета в поле ввода для кол-ва занятий
+        document.querySelector('[name="mybrowser"]').value = kolvo_zan;
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__blocks">
+            <div class="left__block">
+                <header>
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="logo">
+                    </div>
+                    <nav>
+                        <ul>
+                            <a href="../adminka/adm_index.htm"><li>Главная</li></a>
+                            <a href="../adminka/adm_news.htm"><li>Новости</li></a>
+                            <a href="#!"><li>Факультеты</li></a>
+                            <a href="../adminka/adm_teacher.htm"><li>Преподаватели</li></a>
+                            <a href="../adminka/adm_docs.htm"><li>Документы</li></a>
+                            <a href="../index.html"><li>Выйти</li></a>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="right__block">
+                <section class="faculties">
+                    <h2>ФАКУЛЬТЕТЫ</h2>
+                    <div class="faculties__card">
+                        <div class="faculties__card__content">
+                            <div class="faculties__card__title">
+                                <p>Художественный </p>
+                                
+                            </div>
+
+                            <div class="faculties__card__text">
+                                <p>
+                                    На данном факультете мы помогаем видеть и понимать красоту окружающего мира, стараемся способствовать воспитанию культуры чувств, развитию художественно-эстетического вкуса, трудовой и творческой активности, воспитываем целеустремленность, усидчивость, чувство взаимопомощи, даём возможность творческой самореализации личности.  Знания, умения, навыки воспитанники демонстрируют своим сверстникам, выставляя свои работы.
+                                </p>
+                                <br>
+                                <p><span>График:</span> вторник/четверг с 17:00 до 20:00</p>
+                                <p><span>Полный курс обучения:</span> 416 занятий</p>
+                            </div>
+                            <div class="faculties__card__button">
+                                <a href="../vivod_hud.php"><button>УЧЕНИКИ</button></a>
+                            </div>
+                        </div>
+                        <div class="faculties__card__img">
+                            <img src="../img/facultets/1.png" alt="1">
+                        </div>
+                    </div>
+                    <div class="faculties__card">
+                        <div class="faculties__card__content">
+                            <div class="faculties__card__title">
+                                <p>Театральный</p>
+                                
+                            </div>
+
+                            <div class="faculties__card__text">
+                                <p>
+                                    Театр как искусство научит видеть прекрасное в жизни и в людях, зародит стремление самому нести в жизнь благое и доброе. Реализация программы с помощью выразительных средств театрального искусства таких как, интонация, мимика, жест, пластика, походка  учит детей глубоко чувствовать события, взаимоотношения между героями произведения. Театральная игра способствует развитию фантазии, воображения, памяти, всех видов творчества. 
+                                </p>
+                                <br>
+                                <p><span>График:</span> вторник/четверг с 17:00 до 20:00</p>
+                                <p><span>Полный курс обучения:</span> 416 занятий</p>
+                            </div>
+                            <div class="faculties__card__button">
+                                <a href="../vivod_teatr.php"><button>УЧЕНИКИ</button></a>
+                            </div>
+                        </div>
+                        <div class="faculties__card__img">
+                            <img src="../img/facultets/2.png" alt="2">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="footer__content">
+                <div class="footer__content__adr">
+                    Адрес: &nbsp Россия, г. Москва, ул. Маршала Новикова, 115
+                </div>
+                <div class="footer__content__phone">
+                    Телефон: &nbsp +7 (957) 557-41-99
+                </div>
+                <div class="footer__content__mail">
+                    E-mail: &nbsp 1dshiinworld@gmail.ru
+                </div>
+                <div class="footer__content__social">
+                    <div class="vk__icon">
+                        <a href="#!"><img src="../img/icons/vk.png" alt="vk"></a>
+                    </div>
+                    <div class="viber__icon">
+                        <a href="#!"><img src="../img/icons/viber.png" alt="viber"></a>
+                    </div>
+                    <div class="telegram__icon">
+                        <a href="#!"><img src="../img/icons/telegram.png" alt="telegram"></a>
+                    </div>
+                    <div class="inst__icon">
+                        <a href="#!"><img src="../img/icons/inst.png" alt="inst"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+
+        <div id="input" class="modalbackground">
+            
+            <form action="../login_edit.php" method="POST">
+                <div class="modalwindow">
+                <input type="text" required placeholder="Логин*" class="form-control" name="number"> 
+                <input type="password" class="form-control" placeholder="Пароль*" name="pass" id="floatingPassword" placeholder="Password">
+                <button>Войти<value="Войти"></button>
+            </form>
+            <a href="" class="close"></a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

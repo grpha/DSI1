@@ -1,0 +1,803 @@
+@import "_fonts";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Ubuntu;
+    h2{
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .modalbackground {
+        margin: 0; 
+        padding: 0; 
+        position: fixed; 
+        top:0; 
+        bottom:0;
+        left:0;
+        right:0;
+        background: rgba(0,0,0,0.5); 
+        z-index:100; 
+        opacity:0; 
+        pointer-events: none;
+        .modalwindow {
+            position: relative;
+            
+            width: 400px;
+            height: 250px;
+            margin: 15% auto;
+            padding: 40px 25px 20px 25px;
+            background: rgb(255, 255, 255);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 40px;
+            input{
+                width: 100%;
+                height: 40px;
+                border-radius: 20px;
+                font-size: 15px;
+                padding-left: 16px;
+                border: none;
+                background: #D9D9D9;
+            }
+            
+            button{
+                color: rgb(0, 0, 0);
+                background: #D9D9D9;
+                border-radius: 20px;
+                border: none;
+                text-align: center; 
+                width: 145px;
+                height: 46px;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: center;
+                transition: 0.1s ease-in;
+                cursor: pointer;
+            }
+    
+            button:hover{
+                background: #FFC133;
+                transition: 0.1s ease-in;
+            }
+    
+            button:active{
+                transform: translateY(2px);
+            }
+
+            .close {
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                opacity: 1;
+            }
+
+            .close:hover {
+                opacity: 0.7;
+              }
+              .close:before, .close:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 25px;
+                width: 4px;
+                background-color: rgb(0, 0, 0);
+              }
+              .close:before {
+                transform: rotate(45deg);
+              }
+              .close:after {
+                transform: rotate(-45deg);
+              }
+        }
+    }
+        
+    .modalbackground:target {
+        opacity: 1; 
+        pointer-events: auto; 
+    }
+        
+
+    .modalbackgroundzapis {
+        margin: 0; 
+        padding: 0; 
+        position: fixed; 
+        top:0; 
+        bottom:0;
+        left:0;
+        right:0;
+        background: rgba(0,0,0,0.5); 
+        z-index:100; 
+        opacity:0; 
+        pointer-events: none;
+        .modalwindowzapis {
+            position: relative;
+            width: 600px;
+            height: 450px;
+            margin: 10% auto;
+            padding: 40px 25px 20px 25px;
+            background: rgb(255, 255, 255);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            
+            row-gap: 20px;
+            h1{
+                text-align: center;
+            }
+            input[type="text"]{
+                width: 100%;
+                height: 35px;
+                border-radius: 20px;
+                font-size: 15px;
+                padding-left: 16px;
+                border: none;
+                background: #D9D9D9;
+            }
+            
+
+            
+                
+           .modalwindowzapis1{ 
+               display:inline-block;
+           }
+               input{
+                   float: left;
+                   width: 50%;
+           }
+           .modalwindowzapis2{ 
+               margin-left: 13%;
+               display:inline-block;
+               width: 50%;
+           }
+               input{
+                   float: right;    
+           }
+           
+
+
+
+
+         
+           .form_radio_btn {
+               display:flex;
+            
+        }
+            
+        #fak{
+            position:absolute;
+            top:220px;
+        }
+        .form_radio_btn input[type=radio] {
+            display: none;
+           
+        }
+        .form_radio_btn label {
+            width: 28%;
+            text-align: center;
+            display:flex;
+            cursor: pointer;
+            background: #D9D9D9;
+            padding: 0px 15px;
+            line-height: 34px;
+            border-radius: 20px;
+            user-select: none;
+            position:absolute;
+            top:215px;
+            margin-left: 33%;
+        }
+        
+        /* Checked */
+        .form_radio_btn input[type=radio]:checked + label {
+        background: #FFC133;
+}
+
+
+.form_radio_btn1 label {
+    width: 22%;
+    text-align: center;
+    display:flex;
+    cursor: pointer;
+    background: #D9D9D9;
+    padding: 0px 15px;
+    line-height: 34px;
+    border-radius: 20px;
+    user-select: none;
+    position:absolute;
+    top:215px;
+    margin-left: 67%;
+}
+
+/* Checked */
+.form_radio_btn1 input[type=radio]:checked + label {
+background: #FFC133;
+}
+        
+
+.modalwindowzapis3{ 
+    position:absolute;
+    top:260px;
+    width: 25%;
+}
+
+.modalwindowzapis4{ 
+    position:absolute;
+    top:260px;
+    margin-left: 55%;
+}
+
+
+
+
+            button{
+                color: rgb(0, 0, 0);
+                background: #D9D9D9;
+                border-radius: 20px;
+                border: none;
+                text-align: center; 
+                width: 200px;
+                height: 46px;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: center;
+                transition: 0.1s ease-in;
+                cursor: pointer;
+                position: relative;
+                left: 33%;
+                position:absolute;
+                top:350px;
+            }
+    
+            button:hover{
+                background: #FFC133;
+                transition: 0.1s ease-in;
+            }
+    
+            button:active{
+                transform: translateY(2px);
+            }
+
+
+            
+            .close {
+                position: absolute;
+                right: 40px;
+                top: 10px;
+                opacity: 1;
+            }
+
+            .close:hover {
+                opacity: 0.7;
+              }
+              .close:before, .close:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 25px;
+                width: 4px;
+                background-color: rgb(0, 0, 0);
+              }
+              .close:before {
+                transform: rotate(45deg);
+              }
+              .close:after {
+                transform: rotate(-45deg);
+              }
+        }
+    }
+        
+    .modalbackgroundzapis:target {
+        opacity: 1; 
+        pointer-events: auto; 
+    }   
+
+
+
+
+    
+
+    
+}
+.wrapper__blocks {
+    display: flex;
+}
+
+.left__block {
+    background-color: #5D4494;
+    width: 200px;
+    display: flex;
+    justify-content: end;
+    header{
+        margin-top: 28px;
+        margin-right: 33px;
+        ul{
+            margin-top: 83px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 83px;
+            a:hover{
+                color: #d1bbbb;
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+.right__block {
+    flex-grow: 1;
+
+    .main{
+        height: 780px;
+        background-image: url(../img/main-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+
+        h1{
+            font-size: 30px;  
+            text-transform: uppercase;
+            width: 585px;
+            text-align: center;
+            padding-top: 285px;
+            margin-left: 358px;
+            
+        }
+    }
+
+    .about{
+        background: #F0F0F0;
+        background-image: url(../img/bg-about.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-left: 89px;
+        padding-bottom: 152px;
+        h2{
+            font-size: 60px;
+            padding-top: 87px;      
+        }
+        .content__block{
+            margin-top: 131px;
+            width: 1050px;
+            .first__content__block{
+                display: flex;
+                justify-content: space-between;
+                .text__content{
+                    font-size: 19px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    width: 550px;
+                    text-align: justify;
+                }
+            }
+
+            .second__content__block{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 165px;
+                .text__content{
+                    font-size: 19px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    width: 550px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    
+    
+
+    // Страница факультеты
+
+    .faculties{
+        background: #F0F0F0;
+        padding-left: 35px;
+        padding-top: 50px;
+        padding-bottom: 103px;
+        h2{
+            font-size: 60px;
+        }
+
+        .faculties__card:nth-child(2){
+            margin-top: 115px;
+        }
+
+        .faculties__card:nth-child(3){
+            margin-top: 84px;
+        }
+
+        .faculties__card{
+            max-width: 916px;
+            display: flex;
+            justify-content: space-between;
+            background: #E3E3E3;
+            border-radius: 20px;
+            padding: 45px;
+            
+            
+            .faculties__card__content{
+                .faculties__card__title{
+                    font-size: 30px;
+                    font-weight: 700;
+ button{
+                width: 24px;
+                height: 24px;
+                margin-top: 13px;
+                margin-left: 10px;
+                cursor: pointer;
+                background-image: url(../img/add.png);
+                background-color: transparent;
+                border: none;
+            }
+
+                }
+                .faculties__card__text{
+                    font-size: 20px;
+                    width: 500px;
+                    margin-top: 47px;
+                    line-height: 20px;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                .faculties__card__button{
+                    margin-top: 40px;
+                    button{
+                        width: 192px;
+                        height: 50px;
+                        font-weight: 700;
+                        font-size: 20px;
+                        border-radius: 20px;
+                        background: #AEAEAE;
+                        border: none;
+                        cursor: pointer;
+                        transition: 0.1s ease-in-out;
+                    }
+                    button:hover{
+                        background: #FFC133;
+                        transition: 0.1s ease-in-out;
+                    }
+
+                    button:active{
+                        transform: translateY(2px);
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    // Страница новости
+
+    .news{
+        padding-top: 40px;
+        height: 800px;
+        background: #1A1A1A;
+        background-image: url(../img/news/bg-news.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+        
+        .title__block{
+            display: flex;
+            h2{
+                font-size: 60px;
+                font-weight: 700;
+                color: #FFC133;
+                margin-left: 50px;
+            }
+            button{
+                width: 24px;
+                height: 24px;
+                margin-top: 13px;
+                margin-left: 10px;
+                cursor: pointer;
+                background-image: url(../img/add.png);
+                background-color: transparent;
+                border: none;
+            }
+        }
+        .news__block{
+            margin-top: 60px;
+            margin-left: 25px;
+            width: 937px;
+            background-image: url(../img/news/news.png);
+            h3{
+                font-size: 55px;
+                font-weight: 700;
+                color: #fff;
+                padding-left: 110px;
+                padding-top: 100px;
+            }
+            .news__content__block{
+                display: flex;
+                align-items: center;
+                margin-left: 40px;
+                margin-top: 84px;
+                .news__arrow__left{
+                    margin-right: 50px;
+                    cursor: pointer;
+                }
+
+                .news__arrow__right{
+                    cursor: pointer;
+                }
+                
+                .news__text{
+                    color: #fff;    
+                    width: 650px;
+                    text-align: justify;
+                    margin-right: 50px;
+                }
+                
+            }
+            
+            button{
+                background: #D9D9D9;
+                width: 270px;
+                height: 75px;
+                border-radius: 20px;
+                font-size: 23px;
+                font-weight: 700;
+                cursor: pointer;  
+                margin-left: 110px;
+                margin-top: 55px;
+                margin-bottom: 83px;
+                border: none;
+                transition: 0.2s ease-in-out;
+            }
+
+            button:hover{
+                background: #FFC133;
+                transition: 0.1 s ease-in-out;
+            }
+
+            button:active{
+                transform: translateY(2px);
+            }   
+                
+        }
+        
+    }
+
+    // Страница преподаватели
+
+    .teacher{
+        background: #F4F4F4;
+        padding-left: 50px;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    .prep_block{
+        display: flex;
+        h2{
+            font-size: 60px;
+            font-weight: 700;
+        }
+            button{
+                width: 20px;
+                height: 20px;
+                margin-top: 13px;
+                margin-left: 10px;
+                cursor: pointer;
+                background-image: url(../img/Vector.png);
+                border: none;
+        }
+    }
+    
+        .teacher__card{
+            margin-top: 73px;
+            background: #ECECEC;
+            padding: 40px 15px;
+            width: 915px;
+            border-radius: 20px;
+            .teacher__card__content{
+                display: flex;
+                .teacher__card__arrow__left{
+                    margin-right: 30px;
+                    margin-top: 250px;
+                    cursor: pointer;
+                }
+                .teacher__card__img{
+                    margin-right: 54px;
+                }
+                .teacher__card__about{
+                    width: 510px;
+                    margin-right: 30px;
+                    h3{
+                        font-size: 40px;
+                        font-weight: 700;
+                    }
+                    .text{
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin-top: 25px;
+                        text-align: justify;
+                    }
+                }
+                .teacher__card__arrow__right{
+                    margin-top: 250px;
+                    cursor: pointer;
+                }
+            }
+
+            .teacher__card__exp{
+                margin-top: 60px;
+                margin-left: 55px;
+                display: flex;
+                .teacher__card__exp__faculty{
+                    margin-right: 216px;
+                    .faculty__name{
+                        font-size: 30px;
+                        font-weight: 700;
+                    }
+                    .faculty__type{
+                        font-size: 23px;
+                        font-weight: 700;
+                        margin-top: 20px;
+                    }
+                    .faculty__sub{
+                        margin-top: 13px;
+                        font-size: 18px;
+                        width: 280px;
+                    }
+                }
+
+                .teacher__card__exp__education{
+                    margin-right: 216px;
+                    .education__name{
+                        font-size: 30px;
+                        font-weight: 700;
+                    }
+                    .education__type{
+                        font-size: 23px;
+                        font-weight: 700;
+                        margin-top: 20px;
+                    }
+                    .education__sub{
+                        margin-top: 13px;
+                        font-size: 18px;
+                        width: 270px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // Страница документы
+
+    .docs{
+        padding-top: 60px;
+        padding-left: 50px;
+        padding-bottom: 180px;
+        background: #F5F5F5;
+        .docs_zag{
+            display: flex;
+        h2{
+            font-size: 60px;
+            font-weight: 700;
+        }
+        button{
+            width: 20px;
+            height: 20px;
+            margin-top: 13px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-image: url(../img/Vector.png);
+            border: none;
+        }
+    }
+        .docs__links__block{
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            margin-top: 123px;
+            width: 890px;
+            .docs__link{
+                text-transform: uppercase;
+                font-size: 18px;
+                color: #000;
+            }
+            button{
+                width: 60px;
+                height: 24px;
+                margin-top: 13px;
+                margin-left: 10px;
+                cursor: pointer;
+                background-image: url(../img/icons.png);
+                border: none;
+            }
+        }
+    }
+}
+
+footer{
+    height: 295px;
+    background: #464646;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-position-x: 910px;
+    background-position-y: 20px;
+    .footer__content{
+        margin-left: 534px;
+        padding-top: 50px;
+        .footer__content__adr{
+            font-size: 18px;
+        }
+        .footer__content__phone{
+            margin-top: 34px;
+            font-size: 18px;
+        }
+        .footer__content__mail{
+            margin-top: 34px;
+            font-size: 18px;
+        }
+        .footer__content__social{
+            font-size: 18px;
+            margin-top: 34px;
+            display: flex;
+            column-gap: 21px;
+        }
+    }
+}
+
+.footer__short{
+    height: 295px;
+    background: #464646;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-position-x: 450px;
+    background-position-y: 20px;
+    .footer__content__short{
+        margin-left: 50px;
+        padding-top: 50px;
+        .footer__content__adr{
+            font-size: 18px;
+        }
+        .footer__content__phone{
+            margin-top: 34px;
+            font-size: 18px;
+        }
+        .footer__content__mail{
+            margin-top: 34px;
+            font-size: 18px;
+        }
+        .footer__content__social{
+            font-size: 18px;
+            margin-top: 34px;
+            display: flex;
+            column-gap: 21px;
+        }
+    }
+}
+
+
+

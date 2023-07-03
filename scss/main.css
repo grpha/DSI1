@@ -1,0 +1,925 @@
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 700;
+  src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu;
+}
+
+body h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrapper .modalbackground {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper .modalbackground .modalwindow {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  margin: 15% auto;
+  padding: 40px 25px 20px 25px;
+  background: white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 40px;
+}
+
+.wrapper .modalbackground .modalwindow input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 15px;
+  padding-left: 16px;
+  border: none;
+  background: #D9D9D9;
+}
+
+.wrapper .modalbackground .modalwindow button {
+  color: black;
+  background: #D9D9D9;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  width: 145px;
+  height: 46px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.wrapper .modalbackground .modalwindow button:hover {
+  background: #FFC133;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.wrapper .modalbackground .modalwindow button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.wrapper .modalbackground .modalwindow .close {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  opacity: 1;
+}
+
+.wrapper .modalbackground .modalwindow .close:hover {
+  opacity: 0.7;
+}
+
+.wrapper .modalbackground .modalwindow .close:before, .wrapper .modalbackground .modalwindow .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 4px;
+  background-color: black;
+}
+
+.wrapper .modalbackground .modalwindow .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.wrapper .modalbackground .modalwindow .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.wrapper .modalbackground:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .modalbackgroundzapis {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  margin: 10% auto;
+  padding: 40px 25px 20px 25px;
+  background: white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  /* Checked */
+  /* Checked */
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis h1 {
+  text-align: center;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis input[type="text"] {
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 15px;
+  padding-left: 16px;
+  border: none;
+  background: #D9D9D9;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .modalwindowzapis1 {
+  display: inline-block;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis input {
+  float: left;
+  width: 50%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .modalwindowzapis2 {
+  margin-left: 13%;
+  display: inline-block;
+  width: 50%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis input {
+  float: right;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis #fak {
+  position: absolute;
+  top: 220px;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn input[type=radio] {
+  display: none;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn label {
+  width: 28%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  background: #D9D9D9;
+  padding: 0px 15px;
+  line-height: 34px;
+  border-radius: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 215px;
+  margin-left: 33%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn input[type=radio]:checked + label {
+  background: #FFC133;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn1 label {
+  width: 22%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  background: #D9D9D9;
+  padding: 0px 15px;
+  line-height: 34px;
+  border-radius: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 215px;
+  margin-left: 67%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .form_radio_btn1 input[type=radio]:checked + label {
+  background: #FFC133;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .modalwindowzapis3 {
+  position: absolute;
+  top: 260px;
+  width: 25%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .modalwindowzapis4 {
+  position: absolute;
+  top: 260px;
+  margin-left: 55%;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis button {
+  color: black;
+  background: #D9D9D9;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  width: 200px;
+  height: 46px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+  position: relative;
+  left: 33%;
+  position: absolute;
+  top: 350px;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis button:hover {
+  background: #FFC133;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .close {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  opacity: 1;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .close:hover {
+  opacity: 0.7;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .close:before, .wrapper .modalbackgroundzapis .modalwindowzapis .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 4px;
+  background-color: black;
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.wrapper .modalbackgroundzapis .modalwindowzapis .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.wrapper .modalbackgroundzapis:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left__block {
+  background-color: #5D4494;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.left__block header {
+  margin-top: 28px;
+  margin-right: 33px;
+}
+
+.left__block header ul {
+  margin-top: 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 83px;
+}
+
+.left__block header ul a:hover {
+  color: #d1bbbb;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.right__block {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.right__block .main {
+  height: 780px;
+  background-image: url(../img/main-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+
+.right__block .main h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  width: 585px;
+  text-align: center;
+  padding-top: 285px;
+  margin-left: 358px;
+}
+
+.right__block .about {
+  background: #F0F0F0;
+  background-image: url(../img/bg-about.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-left: 89px;
+  padding-bottom: 152px;
+}
+
+.right__block .about h2 {
+  font-size: 60px;
+  padding-top: 87px;
+}
+
+.right__block .about .content__block {
+  margin-top: 131px;
+  width: 1050px;
+}
+
+.right__block .about .content__block .first__content__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right__block .about .content__block .first__content__block .text__content {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  width: 550px;
+  text-align: justify;
+}
+
+.right__block .about .content__block .second__content__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 165px;
+}
+
+.right__block .about .content__block .second__content__block .text__content {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  width: 550px;
+  text-align: justify;
+}
+
+.right__block .faculties {
+  background: #F0F0F0;
+  padding-left: 35px;
+  padding-top: 50px;
+  padding-bottom: 103px;
+}
+
+.right__block .faculties h2 {
+  font-size: 60px;
+}
+
+.right__block .faculties .faculties__card:nth-child(2) {
+  margin-top: 115px;
+}
+
+.right__block .faculties .faculties__card:nth-child(3) {
+  margin-top: 84px;
+}
+
+.right__block .faculties .faculties__card {
+  max-width: 916px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #E3E3E3;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__title button {
+  width: 24px;
+  height: 24px;
+  margin-top: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-image: url(../img/add.png);
+  background-color: transparent;
+  border: none;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__text {
+  font-size: 20px;
+  width: 500px;
+  margin-top: 47px;
+  line-height: 20px;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__text span {
+  font-weight: 700;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__button {
+  margin-top: 40px;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__button button {
+  width: 192px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 20px;
+  background: #AEAEAE;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__button button:hover {
+  background: #FFC133;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.right__block .faculties .faculties__card .faculties__card__content .faculties__card__button button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.right__block .news {
+  padding-top: 40px;
+  height: 800px;
+  background: #1A1A1A;
+  background-image: url(../img/news/bg-news.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+
+.right__block .news .title__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right__block .news .title__block h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #FFC133;
+  margin-left: 50px;
+}
+
+.right__block .news .title__block button {
+  width: 24px;
+  height: 24px;
+  margin-top: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-image: url(../img/add.png);
+  background-color: transparent;
+  border: none;
+}
+
+.right__block .news .news__block {
+  margin-top: 60px;
+  margin-left: 25px;
+  width: 937px;
+  background-image: url(../img/news/news.png);
+}
+
+.right__block .news .news__block h3 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 110px;
+  padding-top: 100px;
+}
+
+.right__block .news .news__block .news__content__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+  margin-top: 84px;
+}
+
+.right__block .news .news__block .news__content__block .news__arrow__left {
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.right__block .news .news__block .news__content__block .news__arrow__right {
+  cursor: pointer;
+}
+
+.right__block .news .news__block .news__content__block .news__text {
+  color: #fff;
+  width: 650px;
+  text-align: justify;
+  margin-right: 50px;
+}
+
+.right__block .news .news__block button {
+  background: #D9D9D9;
+  width: 270px;
+  height: 75px;
+  border-radius: 20px;
+  font-size: 23px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 110px;
+  margin-top: 55px;
+  margin-bottom: 83px;
+  border: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.right__block .news .news__block button:hover {
+  background: #FFC133;
+  -webkit-transition: 0.1 s ease-in-out;
+  transition: 0.1 s ease-in-out;
+}
+
+.right__block .news .news__block button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.right__block .teacher {
+  background: #F4F4F4;
+  padding-left: 50px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.right__block .teacher .prep_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right__block .teacher .prep_block h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.right__block .teacher .prep_block button {
+  width: 20px;
+  height: 20px;
+  margin-top: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-image: url(../img/Vector.png);
+  border: none;
+}
+
+.right__block .teacher .teacher__card {
+  margin-top: 73px;
+  background: #ECECEC;
+  padding: 40px 15px;
+  width: 915px;
+  border-radius: 20px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__arrow__left {
+  margin-right: 30px;
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__img {
+  margin-right: 54px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__about {
+  width: 510px;
+  margin-right: 30px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__about h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__about .text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 25px;
+  text-align: justify;
+}
+
+.right__block .teacher .teacher__card .teacher__card__content .teacher__card__arrow__right {
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp {
+  margin-top: 60px;
+  margin-left: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__faculty {
+  margin-right: 216px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__faculty .faculty__name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__faculty .faculty__type {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__faculty .faculty__sub {
+  margin-top: 13px;
+  font-size: 18px;
+  width: 280px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__education {
+  margin-right: 216px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__education .education__name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__education .education__type {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.right__block .teacher .teacher__card .teacher__card__exp .teacher__card__exp__education .education__sub {
+  margin-top: 13px;
+  font-size: 18px;
+  width: 270px;
+}
+
+.right__block .docs {
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-bottom: 180px;
+  background: #F5F5F5;
+}
+
+.right__block .docs .docs_zag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right__block .docs .docs_zag h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.right__block .docs .docs_zag button {
+  width: 20px;
+  height: 20px;
+  margin-top: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-image: url(../img/Vector.png);
+  border: none;
+}
+
+.right__block .docs .docs__links__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+  margin-top: 123px;
+  width: 890px;
+}
+
+.right__block .docs .docs__links__block .docs__link {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+}
+
+.right__block .docs .docs__links__block button {
+  width: 60px;
+  height: 24px;
+  margin-top: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-image: url(../img/icons.png);
+  border: none;
+}
+
+footer {
+  height: 295px;
+  background: #464646;
+  background-image: url(../img/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position-x: 910px;
+  background-position-y: 20px;
+}
+
+footer .footer__content {
+  margin-left: 534px;
+  padding-top: 50px;
+}
+
+footer .footer__content .footer__content__adr {
+  font-size: 18px;
+}
+
+footer .footer__content .footer__content__phone {
+  margin-top: 34px;
+  font-size: 18px;
+}
+
+footer .footer__content .footer__content__mail {
+  margin-top: 34px;
+  font-size: 18px;
+}
+
+footer .footer__content .footer__content__social {
+  font-size: 18px;
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 21px;
+          column-gap: 21px;
+}
+
+.footer__short {
+  height: 295px;
+  background: #464646;
+  background-image: url(../img/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position-x: 450px;
+  background-position-y: 20px;
+}
+
+.footer__short .footer__content__short {
+  margin-left: 50px;
+  padding-top: 50px;
+}
+
+.footer__short .footer__content__short .footer__content__adr {
+  font-size: 18px;
+}
+
+.footer__short .footer__content__short .footer__content__phone {
+  margin-top: 34px;
+  font-size: 18px;
+}
+
+.footer__short .footer__content__short .footer__content__mail {
+  margin-top: 34px;
+  font-size: 18px;
+}
+
+.footer__short .footer__content__short .footer__content__social {
+  font-size: 18px;
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 21px;
+          column-gap: 21px;
+}
+/*# sourceMappingURL=main.css.map */
